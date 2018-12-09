@@ -16,8 +16,8 @@ This Readme file describe how all projects are sortd.
 - Each Topic has an object called 'helperCodes'.
 
 - Data
-= uploaded iff it's small size
-= else, Google drive link, or i keep for only me.
+-- uploaded iff it's small size
+-- else, Google drive link, or i keep for only me.
 
 - nlibarary:- jar:Java, venv:Python, ...
-= uploaded iff (it's difficult to get all libraries, or there is conflicts).
+-- uploaded iff (it's difficult to get all libraries, or there is conflicts).
