@@ -1,5 +1,5 @@
 # Label Data
-- This is script to help in hand data labeling.
+- This script to help in hand data labeling.
 
 - Put all data files if dir(Data), and run the script, and start labeling.
 

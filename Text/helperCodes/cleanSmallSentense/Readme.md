@@ -1,5 +1,5 @@
 # Label Data
-- This is script to remove short sentense.
+- This script to remove short sentense.
 
 - Put all data files if dir(Data), and run the script, and start cleaning.
 
