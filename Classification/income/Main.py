@@ -10,7 +10,7 @@ def stringToOnehot(df, colName):
     onehotMatrix = pd.get_dummies(df[colName])
     names = []
     for catCode in onehotMatrix:
-        names.append(colName+str(catCode))
+        names.append(colName + str(catCode))
     
     onehotMatrix.columns = names
     del df[colName]

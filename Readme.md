@@ -21,3 +21,10 @@ This Readme file describe how all projects are sortd.
 
 - nlibarary:- jar:Java, venv:Python, ...
 	- uploaded iff (it's difficult to get all libraries, or there is conflicts).
+
+- Every project Readme file contains :-
+	- Problem explaination.
+	- Algorithm, or model i used (High level).
+	- Illustrating step by step.
+	- Results.
+	- Beginner Training points.
