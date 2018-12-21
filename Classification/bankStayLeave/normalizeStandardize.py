@@ -5,11 +5,11 @@ def normalize(df, columns):
     minimun = df[columns].min()
     maximum = df[columns].max()
     df[columns] = (df[columns] - minimun) / (maximum - minimun)
-    return df
+    return df, minimun, maximum
 
 
 def standardize(df, columns):
     mean = df[columns].mean()
     std = df[columns].std()
     df[columns] = (df[columns] - mean) / std
-    return df
+    return df, mean, std
