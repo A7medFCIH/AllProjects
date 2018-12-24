@@ -23,4 +23,6 @@ def adaptNormalize(df, columns, minimun, maximum):
 def adaptStandardize(df, columns, mean, std):
     df[columns] = (df[columns] - mean) / std
     return df
+
+# normalize Image by (image / 255.) --> so the values become 0:1
     

@@ -43,7 +43,7 @@ Y = tf.placeholder(tf.float32, [None, trainLabel.shape[1]])
 layer1 = tf.layers.dense(X, 64, tf.nn.relu)
 layer2 = tf.layers.dense(layer1, 32, tf.nn.relu)
 layer3 = tf.layers.dense(layer2, 8, tf.nn.relu)
-output = tf.layers.dense(layer2, 1, tf.nn.relu)
+output = tf.layers.dense(layer3, 1, tf.nn.relu)
 
 loss = tf.losses.huber_loss(labels=Y, predictions=output)
 optimizer = tf.train.AdamOptimizer(.001).minimize(loss)
