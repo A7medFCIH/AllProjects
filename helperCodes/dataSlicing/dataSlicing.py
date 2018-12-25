@@ -1,6 +1,7 @@
 def spiltData(dataset, testPercentage, validation=0):
     testSize = int(dataset.shape[0] * testPercentage)
     testSize = min(testSize, 10**4)
+    testSize = max(testSize, 2000)
     totalSize = testSize + (testSize * validation)
     
     trainData = dataset.iloc[:-totalSize, :-1]
