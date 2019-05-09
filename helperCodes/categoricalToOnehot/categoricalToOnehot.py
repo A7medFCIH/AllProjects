@@ -2,6 +2,30 @@ import numpy as np
 import pandas as pd
 
 def getEncoding(realColumn, encodeedDF):
+    '''
+    Takes Data before, and after encoding, returns dictionary describe the mapping
+
+    Parameters
+    ----------
+    realColumn : [any]
+        contains the Data before encodeing
+
+    encodeedDF : DataFrame
+        contains the Data after encodeing
+    
+    Attributes
+    ----------
+    encodeing : dict
+        store each category as key, and mapped encodeing as value
+
+    stayUniques : [any]
+        store the values we didn't find their encodeing yet
+    
+    Returns
+    -------
+    encodeing : dict
+        store each category as key, and mapped encodeing as value
+    '''
     _, encodeLength = encodeedDF.shape
     encoding = {}
     stayUniques = realColumn.unique().tolist()
@@ -21,6 +45,39 @@ def getEncoding(realColumn, encodeedDF):
 
 
 def categoriesToOnehot(df, columnName):
+    '''
+    convert categorical values to onehot
+
+    Parameters
+    ----------
+    df : DataFrame
+        contains the data.
+
+    columnName : str
+        contains the name of column contains categorical data.
+    
+    Attributes
+    ----------
+    oneHotMatrix : np.matrix
+        stores data in onehot format
+    
+    names : [str]
+        contains new columns names
+    
+    encodeing : dict
+        store each category as key, and mapped encodeing as value
+    
+    Returns
+    -------
+    df : DataFrame
+        Data after encodeing
+    
+    encodeing : dict
+        store each category as key, and mapped encodeing as value
+    
+    names : [str]
+        contains new columns names
+    '''
     oneHotMatrix = pd.get_dummies(df[columnName])
     
     names = []
@@ -36,6 +93,20 @@ def categoriesToOnehot(df, columnName):
 
 
 def encode(df, columnName, encoding, newNames):
+    '''
+    maps data to desired encodeing, for testing, and predection using.
+
+    Parameters
+    ----------
+    df : DataFrame
+        Data before encodeing
+
+    encodeing : dict
+        contains encodeing rules as key value form
+
+    newNames : [str] 
+        contains new names for columns to be set
+    '''
     dataEncoding = df[columnName].map(encoding)
     dataEncoding = pd.DataFrame(dataEncoding)
     if len(newNames) > 1:
